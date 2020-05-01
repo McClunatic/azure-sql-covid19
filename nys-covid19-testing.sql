@@ -107,7 +107,3 @@ GO
 ALTER TABLE Testing
 ADD CumulativeNumberOfTestsPerformed AS (TotalNumberOfTestsPerformed + dbo.getTotalTestsPerformed(TestDate, County));
 GO
-
-DROP TABLE Testing
-DROP FUNCTION getTotalPositives
-DROP FUNCTION getTotalTestsPerformed
