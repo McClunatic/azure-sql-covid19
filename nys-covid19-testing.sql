@@ -107,3 +107,9 @@ GO
 ALTER TABLE Testing
 ADD CumulativeNumberOfTestsPerformed AS (TotalNumberOfTestsPerformed + dbo.getTotalTestsPerformed(TestDate, County));
 GO
+
+GRANT SELECT ON SCHEMA :: [dbo] to public;
+GO
+
+CREATE USER public_user WITH PASSWORD = 'NYS-covid-19';
+GO
